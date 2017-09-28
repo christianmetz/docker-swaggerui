@@ -23,7 +23,7 @@ RUN unzip ${SWAGGER_UI_VERSION}.zip && \
     rm ${SWAGGER_UI_VERSION}.zip && \
     mv swagger-ui-${SWAGGER_UI_VERSION}/dist/* . && \
     rm -r swagger-ui-${SWAGGER_UI_VERSION}/ && \
-    sed -i "s|http://petstore.swagger.io/v2/swagger.json|http://localhost/spec|g" index.html
+    sed -i "s|http://petstore.swagger.io/v2/swagger.json|/spec|g" index.html
 
 WORKDIR /usr/src/app
 
